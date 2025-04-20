@@ -1,3 +1,4 @@
+
 import React, {useEffect, useState} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -30,7 +31,6 @@ const Navbar = () => {
 
 	const [truebs, setTruebs] = React.useState(false);
 	const [state, setState] = React.useState<any>({left: false, });
-	const [data, setdata] = useState()
 
 
 	const toggleDrawer = (anchor: 'left' | 'right' | 'top' | 'bottom', open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -184,7 +184,7 @@ const Navbar = () => {
 						onClick={showAndHIdesidebar}
 						color="inherit"
 					>
-						{data ? <img src={data} height={40} width={40} style={{borderRadius: "50%"}} /> : <AccountCircle sx={{fontSize: 35}} />}
+						<AccountCircle sx={{fontSize: 35}} />
 					</IconButton>
 					{
 						truebs && <Handlesigninpage />

@@ -11,7 +11,7 @@ const DashBoard = () => {
 
 		{id: 2, label: 'Toast Notification', path: '/toastNotification', background: 'linear-gradient(to right, #ff7e5f, #feb47b)'},
 
-		// {id: 3, label: 'Go to Task 3', path: '/task3', background: 'linear-gradient(to right, #43cea2, #185a9d)'},
+		{id: 3, label: 'Pagination', path: '/pagination', background: 'linear-gradient(to right, #43cea2, #185a9d)'},
 
 	];
 

@@ -32,7 +32,7 @@ const RecipeReviewCard: React.FC<dataProps> = ({apidata, apiloading}) => {
 	</>
 }
 
-const Pagination: React.FC<Props> = ({ }) => {
+const PaginationSecondPart: React.FC<Props> = ({ }) => {
 
 	const [apidata, setapidata] = useState<any>();
 	const [page, setpage] = useState<any>(1);
@@ -44,7 +44,7 @@ const Pagination: React.FC<Props> = ({ }) => {
 			try {
 				setApiLoading(true)
 				let data = await fetch(
-					`https://picsum.photos/v2/list?page=${page}&limit=5`
+					`https://picsum.photos/v2/list?limit=35`
 				);
 				let parsedata = await data.json();
 				setapidata(parsedata);
@@ -115,4 +115,4 @@ const Pagination: React.FC<Props> = ({ }) => {
 	)
 }
 
-export default Pagination;
+export default PaginationSecondPart;

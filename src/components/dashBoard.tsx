@@ -11,14 +11,17 @@ const DashBoard = () => {
 
 		{id: 2, label: 'Toast Notification', path: '/toastNotification', background: 'linear-gradient(to right, #ff7e5f, #feb47b)'},
 
-		{id: 3, label: 'Pagination', path: '/pagination', background: 'linear-gradient(to right, #43cea2, #185a9d)'},
+		{id: 3, label: 'Pagination (easy) ', path: '/pagination', background: 'linear-gradient(to right, #43cea2, #185a9d)'},
+
+		{id: 4, label: 'Pagination (medium) ', path: '/paginationHard', background: 'linear-gradient(to right,rgb(5, 45, 125),rgb(64, 134, 204))'},
+
 
 	];
 
 	return (
 		<div>
 			<Navbar />
-			<Box height={"auto"} width={"100%"} margin={"auto"} marginTop={"3rem"}>
+			<Box height={"auto"} width={"100%"} margin={"auto"} marginTop={"1rem"} >
 				{/* Render cards dynamically */}
 				<div className="card-container">
 					{tasks.map(task => (

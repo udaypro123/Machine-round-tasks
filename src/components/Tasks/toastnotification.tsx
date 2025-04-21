@@ -71,7 +71,7 @@ const ToastNotification: React.FC<Props> = ({ }) => {
 
 	return (
 		<>
-			<Grid container sx={{marginTop: "5rem", marginLeft: "7rem", height: "10vh", width: "98%", bgcolor: "lightgrey", borderRadius: "1rem", display: "flex", justifyContent: "center", alignItems: "center"}} >
+			<Grid container sx={{margin: "5rem auto", height: "10vh", width: "90%", display: "flex", justifyContent: "center", alignItems: "center"}} >
 				<Grid size={{xs: 12, md: 12}} sx={{display: "flex", justifyContent: "space-evenly", alignItems: "center", }} >
 					<Button variant="contained" className="success" onClick={() => handleBtn("success")} >Success</Button>
 					<Button variant="contained" className="error" onClick={() => handleBtn("error")}>Error</Button>
@@ -80,7 +80,19 @@ const ToastNotification: React.FC<Props> = ({ }) => {
 				</Grid>
 			</Grid>
 
-			<Grid sx={{width: "99vw", marginTop: "10rem"}} >
+			<Grid
+				sx={{
+					position: "fixed",
+					bottom: 0,
+					left: 0,
+					width: "90vw",
+					margin: "1rem",
+					display: "flex",
+					flexDirection: "column-reverse",
+					alignItems: "flex-start",
+					zIndex: 1300
+				}}
+			>
 				{
 					list.map((item) => {
 						return <>

@@ -17,9 +17,9 @@ const useStyles: any = makeStyles(() => ({
 		justifyContent: "space-between",
 		alignItems: "center",
 		animation: `$slide 1s`,
-		margin: ".5rem",
-		marginTop: ".5rem",
-		marginBottom: "1rem"
+		margin: ".1rem",
+		marginTop: ".3rem",
+		marginBottom: ".3rem"
 	},
 	'@keyframes slide': {
 		'0%': {
@@ -52,8 +52,8 @@ const ToastNotification: React.FC<Props> = ({ }) => {
 	let color: ColorMap = {
 		success: "green",
 		error: "red",
-		warning: "yellow",
-		info: "aqua",
+		warning: "#8c7a07",
+		info: "#075d69",
 	}
 
 	const handleBtn = (message: string) => {
@@ -80,13 +80,13 @@ const ToastNotification: React.FC<Props> = ({ }) => {
 				</Grid>
 			</Grid>
 
-			<Grid sx={{width: "99vw", marginTop: "10rem", backgroundColor: "lightblue"}} >
+			<Grid sx={{width: "99vw", marginTop: "10rem"}} >
 				{
 					list.map((item) => {
 						return <>
 							<Grid className={classes.toast} bgcolor={color[item.message as keyof ColorMap]}>
 								<Typography marginLeft={"1rem"} padding={".5rem"} color="white">{item.message}</Typography>
-								<Delete sx={{marginRight: "1rem"}} onClick={() => handeldelte(item.id)} />
+								<Delete sx={{marginRight: "1rem", color: "white"}} onClick={() => handeldelte(item.id)} />
 							</Grid>
 						</>
 					})
